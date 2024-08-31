@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title color="primary">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" class="ion-padding">
+ <h1 class="ion-text-center"> SkeletonApp</h1>
+  <p class="ion-text-center">bienvenido al login</p>
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Iniciar Sesión</ion-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="loginForm">
+        <ion-item lines="full">
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input formControlName="usuario" type="text"></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <ion-row>
+          <br>
+          <ion-col class="ion-text-center">
+            <ion-button expand="full" (click)="ingresar()">Ingresar</ion-button>
+            <br>
+            <a routerLink="/registro" style="text-decoration: underline;">Crear una cuenta gratis</a>
+          </ion-col>
+        </ion-row>
+      </form>
+     
+    </ion-card-content>
+  </ion-card>
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-tabs>
+        <ion-tab-bar slot="bottom">
+          <ion-tab-button tab="home">
+            <ion-icon name="heart-outline"></ion-icon>
+            I love it
+          </ion-tab-button>
+        </ion-tab-bar>
+      </ion-tabs>
+    </ion-toolbar>
+  </ion-footer>
